@@ -1,6 +1,6 @@
-本程序是zookeeper c++ client lib
-实现了服务注册，服务发现，负载均衡 功能，具体包含：主从节点(主节点优先)，最优节点(负载较优)，连接池和地址池(轮训)
-参考：https://github.com/owenliang/zkclient.git 因为上面这个库，文档详细
+#本程序是zookeeper c++ client lib   
+实现了服务注册，服务发现，负载均衡 功能，具体包含：主从节点(主节点优先)，最优节点(负载较优)，连接池和地址池(轮训)   
+参考：https://github.com/owenliang/zkclient.git 因为上面这个库，文档详细   
 
 名次定义：
 会话恢复：指在旧会话超时，重建新会话时后，恢复必要的 临时节点以及订阅。
