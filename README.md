@@ -223,8 +223,16 @@ class LocalAbandon{   //根据业务问题 主动隐藏服务
 }
 ```
 ---
-## 7. **依赖库**
+## 七、 **依赖库**
 jsoncpp: https://github.com/open-source-parsers/jsoncpp
 zookeeper C API: 官方3.4.10库版本。
 LOG 日志库自己找一个。这里会报错，将日志库的头文件去掉就行，然后用constant.h 中有个宏LOGGER打开就行。
+
+## 八、 **记得打赏**
+各位码农哥，如果好用的话，记得打赏下，失业在家不容易。   
+微信支付   
+<image src="https://github.com/pingzilao/zksdk/blob/master/images/webchatpay.jpg" width="290" alt="微信支付"/>  
+支付宝   
+<image src="https://github.com/pingzilao/zksdk/blob/master/images/alipay.jpg" width="290"  alt="支付宝"/>
+
 
