@@ -1,6 +1,11 @@
 # zookeeper client 设计开发手册   
-实现了服务注册，服务发现，负载均衡 功能，具体包含：主从节点(主节点优先)，最优节点(负载较优)，连接池和地址池(轮训)   
-参考：https://github.com/owenliang/zkclient.git 因为上面这个库，文档详细   
+本手册是根据zookeeper服务特性及官方SDK特点，编写的一套开发手册。针对碰到的大量**陷阱**，提出注意点，并对编写生产可用的sdk提供参考建议。
+
+**本设计（语言基于C++）是基于官方C版Client库而写，对于golang、java及其它语言均有借鉴意见。** 由于竞业协议，代码不便公开，请谅解。   
+
+**实现了服务注册，服务发现，负载均衡 功能，具体包含：主从节点(主节点优先)，最优节点(负载较优)，连接池和地址池(轮训)**。
+
+在开发sdk的过程中，浏览了很多github上的开源库（主要是C和C++），均存在bug，无法生产使用。后来参考了这个库：https://github.com/owenliang/zkclient.git 因为上面这个库，文档详细，但是bug依然很多，并没有解决zookeepeer的一些缺陷。   
 
 名次定义：  
 > 会话恢复：指在旧会话超时，重建新会话时后，恢复必要的 临时节点以及订阅。  
@@ -231,8 +236,8 @@ LOG 日志库自己找一个。这里会报错，将日志库的头文件去掉�
 ## 八、 **记得打赏**
 各位码农哥，如果好用的话，记得打赏下，失业在家不容易。   
 微信支付   
-<image src="https://github.com/pingzilao/zksdk/blob/master/images/webchatpay.jpg" width="290" alt="微信支付"/>  
+<image src="https://github.com/pingzilao/zksdk/blob/master/images/webchatpay.jpg" width="290" />  
 支付宝   
-<image src="https://github.com/pingzilao/zksdk/blob/master/images/alipay.jpg" width="290"  alt="支付宝"/>
+<image src="https://github.com/pingzilao/zksdk/blob/master/images/alipay.png" width="290"/>
 
 
